@@ -77,3 +77,21 @@ function generatePDF() {
 
     doc.save('receipt.pdf');
 }
+
+let isMuted = false;
+
+// Fungsi untuk memulai musik
+function playMusic() {
+    const audio = document.getElementById('backgroundMusic');
+    audio.volume = 0.25; // Set volume ke 25%
+    audio.play(); // Memulai musik
+    document.getElementById('playMusicBtn').style.display = 'none'; // Sembunyikan tombol Play setelah dipilih
+}
+
+// Fungsi untuk mute atau unmute musik
+function toggleMute() {
+    const audio = document.getElementById('backgroundMusic');
+    isMuted = !isMuted;
+    audio.muted = isMuted;
+    document.getElementById('muteMusicBtn').textContent = isMuted ? 'Unmute' : 'Mute';
+}
