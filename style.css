@@ -1,27 +1,27 @@
-/* Menambahkan CSS agar tombol berada di bagian bawah halaman */
 body {
     font-family: Arial, sans-serif;
     background-image: url('assets\\kuromi2.png'); /* Background image */
-    background-repeat: repeat; 
-    background-size: cover; 
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure the background doesn't repeat */
+    background-size: cover; /* Ensure the background covers the entire screen */
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Menjadikan konten vertikal */
-    justify-content: center; /* Memastikan konten berada di tengah */
-    align-items: center; /* Menempatkan konten secara horizontal di tengah */
-    height: 100vh; /* Membuat tinggi halaman 100% */
+    flex-direction: column; /* Makes the content vertical */
+    justify-content: space-between; /* Keeps the content at the top and buttons at the bottom */
+    height: 100vh; /* Full height of the viewport */
 }
 
-/* Menambahkan container untuk konten utama */
+/* Adjust the container style to be centered within the viewport */
 .container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for the content */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 80%; /* Adjust width to be responsive */
+    max-width: 400px; /* Maximum width */
     text-align: center;
-    margin-bottom: 40px; /* Memberikan sedikit jarak di bawah konten */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 h1 {
