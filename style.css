@@ -8,21 +8,28 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column; /* Makes the content vertical */
-    justify-content: space-between; /* Keeps the content at the top and buttons at the bottom */
+    justify-content: flex-start; /* Keeps content at the top */
     height: 100vh; /* Full height of the viewport */
 }
 
-/* Adjust the container style to be centered within the viewport */
+/* Adjust the container style to make it responsive and centered */
 .container {
     background-color: rgba(255, 255, 255, 0.8); /* Light background for the content */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Adjust width to be responsive */
-    max-width: 400px; /* Maximum width */
+    width: 80%; /* Makes the container responsive */
+    max-width: 400px; /* Maximum width of the container */
     text-align: center;
-    margin: 0 auto; /* Center the container horizontally */
+    margin: 20px auto; /* Center the container horizontally with a small top/bottom margin */
+    margin:auto;
 }
+
+/* Ensure the background image cuts the left and right equally */
+/* body {
+    background-position: center center;
+    background-size: cover;
+} */
 
 h1 {
     color: #d85d6a;
@@ -76,8 +83,8 @@ input[type="button"]:hover {
 }
 
 .food-option img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 90px;
     object-fit: cover;
     border-radius: 8px;
 }
