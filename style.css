@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('assets\\kuromi2.png'); /* Background image */
+    background-repeat: repeat; 
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+h1 {
+    color: #d85d6a;
+    margin-bottom: 20px;
+}
+.question {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+select, input[type="text"], input[type="button"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+input[type="button"] {
+    background-color: #d85d6a;
+    color: white;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: #b34f5b;
+}
+.hidden {
+    display: none;
+}
+.food-image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.food-option {
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+.food-option:hover {
+    border-color: #d85d6a;
+}
+.food-option img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.food-option.selected {
+    border-color: #d85d6a;
+    box-shadow: 0 0 10px rgba(216, 93, 106, 0.5);
+}
+.food-option.others {
+    position: relative;
+}
+.food-option.others img {
+    width: 100px;
+    height: 100px;
+}
+/* Styled the "Please Specify" input field */
+.food-option.others input[type="text"] {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.food-option.others input[type="text"]:focus {
+    border-color: #d85d6a; /* Pink border on focus */
+    box-shadow: 0 0 8px rgba(216, 93, 106, 0.3);
+}
+
+/* Add a nice hover effect for food options */
+.food-option img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+#sendReceiptBtn {
+    background-color: #d85d6a;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sendReceiptBtn:hover {
+    background-color: #b34f5b;
+}
